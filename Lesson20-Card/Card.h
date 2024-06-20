@@ -15,7 +15,15 @@ private:
 public:
 	Card(); //Конструктор за замовченням
 	Card(const char* name, double cash);//З параметрами
-	~Card(); //Дуструктор
+	~Card(); //Деструктор
+
+	unsigned long getCardNumber();
+	const char* getName();
+	void setExiredDate(const char* date);
+	const char* getExpiredDate();
+	void setPIN(int oldPIN, int newPIN);
+	int getPIN();
+	double getCash();
 
 	void showInfo();
 };
