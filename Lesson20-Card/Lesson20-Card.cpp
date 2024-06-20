@@ -23,6 +23,18 @@ int main()
     mono->setPIN(a, b);
     cout << "\nCard: " << mono->getCardNumber() << " PIN: " << mono->getPIN() << "\n\n";
 
+    cout << "\n\n=========================================================\n";
+
+    cout << "Input pin: "; cin >> a;
+    cout << "Input money to topup: "; cin >> b;
+    mono->topupCash(a, b);
+    cout << "\nCard: " << mono->getCardNumber() << " Cash: " << mono->getCash() << "\n\n";
+
+    cout << "Input pin: "; cin >> a;
+    cout << "Input money to withdraw: "; cin >> b;
+    mono->withdrawCash(a, b);
+    cout << "\nCard: " << mono->getCardNumber() << " Cash: " << mono->getCash() << "\n\n";
+
     delete mono;
 }
 

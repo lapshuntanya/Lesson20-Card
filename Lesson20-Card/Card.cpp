@@ -58,3 +58,20 @@ void Card::showInfo(){
 	cout << "| \t Cash:     " << cash << " UAH" << endl;
 	cout << "++++++++++++++++++++++++++++++++++++++++++++\n";
 }
+
+void Card::topupCash(int pin, double money)
+{
+	if (pin == PIN) {
+		cash += money;
+	}
+	else cout << "Error: PIN is wrong!\n ";
+}
+
+void Card::withdrawCash(int pin, double money)
+{
+	if (pin != PIN)  cout << "Error: PIN is wrong!\n ";
+	else if (money > cash) cout << "Error: cash is not enough!\n";
+	else {
+		cash -= money;
+	}
+}
