@@ -17,6 +17,7 @@ public:
 	Card(const char* name, double cash);//З параметрами
 	~Card(); //Деструктор
 
+	//Аксесори
 	unsigned long getCardNumber();
 	const char* getName();
 	void setExiredDate(const char* date);
@@ -25,6 +26,9 @@ public:
 	int getPIN();
 	double getCash();
 
+	// Iнші
 	void showInfo();
+	void topupCash(int pin, double money); //Поповнення картки
+	void withdrawCash(int pin, double money); //Зняття грошей
 };
 
