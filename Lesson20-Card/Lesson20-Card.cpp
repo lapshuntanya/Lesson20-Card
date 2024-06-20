@@ -14,8 +14,14 @@ int main()
     if (user == 0) mono = new Card();
     else mono = new Card("Tetiana Lapshun", 25'000);
 
-
     mono->showInfo();
+
+    cout << "\n\n=========================================================\n";
+    int a, b;
+    cout << "Input old pin: "; cin >> a;
+    cout << "Input new pin: "; cin >> b;
+    mono->setPIN(a, b);
+    cout << "\nCard: " << mono->getCardNumber() << " PIN: " << mono->getPIN() << "\n\n";
 
     delete mono;
 }
