@@ -22,38 +22,31 @@ Card::~Card(){
 	cout << "Closed " << cardNumber << " card\n";
 }
 
-unsigned long Card::getCardNumber()
-{
-	return 0;
-}
-
-const char* Card::getName()
-{
-	return nullptr;
-}
+unsigned long Card::getCardNumber(){	return cardNumber;}
+const char* Card::getName(){	return name;}
 
 void Card::setExiredDate(const char* date)
 {
+	int year = atoi(date + 3);
+	if (year > 24) {
+		strcpy_s(expiredDate, 6, date);
+	}
+	else cout << "Error: setExiredDate!\n ";
 }
 
-const char* Card::getExpiredDate()
-{
-	return nullptr;
-}
+const char* Card::getExpiredDate(){	return expiredDate;}
 
 void Card::setPIN(int oldPIN, int newPIN)
 {
+	if (oldPIN == PIN)
+	{
+		PIN = newPIN;
+	}
+	else cout << "Error: oldPIN is wrong!\n ";
 }
 
-int Card::getPIN()
-{
-	return 0;
-}
-
-double Card::getCash()
-{
-	return 0.0;
-}
+int Card::getPIN(){	return PIN; }
+double Card::getCash(){	return cash; }
 
 void Card::showInfo(){
 	cout << "++++++++++++++++++++++++++++++++++++++++++++\n";
