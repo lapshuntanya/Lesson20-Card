@@ -3,6 +3,6 @@
 int main()
 {
     Card mono;
-    mono.
+    mono.showInfo();
 }
 
